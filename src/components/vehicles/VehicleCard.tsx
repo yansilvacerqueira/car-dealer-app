@@ -1,3 +1,5 @@
+import { Car } from "lucide-react";
+
 import {
   Card,
   CardContent,
@@ -5,8 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Vehicle } from "@/types";
-import { Car } from "lucide-react";
+import type { Vehicle } from "@/types";
 
 interface VehicleCardProps {
   vehicle: Vehicle;
@@ -14,10 +15,10 @@ interface VehicleCardProps {
 
 export function VehicleCard({ vehicle }: VehicleCardProps) {
   return (
-    <Card className="overflow-hidden hover:shadow-lg transition-all">
+    <Card className="overflow-hidden transition-all hover:shadow-lg">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Car className="h-5 w-5" />
+          <Car className="size-5" />
 
           {vehicle.Model_Name}
         </CardTitle>
@@ -28,7 +29,7 @@ export function VehicleCard({ vehicle }: VehicleCardProps) {
       </CardHeader>
 
       <CardContent>
-        <div className="bg-gray-50 p-4 rounded-lg">
+        <div className="rounded-lg bg-gray-50 p-4">
           <dl className="grid grid-cols-2 gap-4">
             <div>
               <dt className="text-sm font-medium text-gray-500">Make ID</dt>

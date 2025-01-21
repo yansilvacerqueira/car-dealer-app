@@ -1,5 +1,6 @@
-import { cn } from "@/lib/utils";
 import Link from "next/link";
+
+import { cn } from "@/lib/utils";
 
 interface GeneralErrorProps extends React.HTMLAttributes<HTMLDivElement> {
   minimal?: boolean;
@@ -11,7 +12,7 @@ export default function Error({
 }: GeneralErrorProps) {
   return (
     <div className={cn("h-svh w-full", className)}>
-      <div className="m-auto flex h-full w-full flex-col items-center justify-center gap-2">
+      <div className="m-auto flex size-full flex-col items-center justify-center gap-2">
         {!minimal && (
           <h1 className="text-[7rem] font-bold leading-tight">500</h1>
         )}

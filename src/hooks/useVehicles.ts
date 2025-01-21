@@ -1,6 +1,7 @@
-import { VehicleService } from "@/services/vehicleService";
-import { Make } from "@/types";
 import { useEffect, useState } from "react";
+
+import { VehicleService } from "@/services/vehicleService";
+import type { Make } from "@/types";
 
 export function useVehicles() {
   const [makes, setMakes] = useState<Make[]>([]);

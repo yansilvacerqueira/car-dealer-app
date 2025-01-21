@@ -1,5 +1,5 @@
 import { fetchApi } from "@/lib/api";
-import { ApiResponse, Make, Vehicle } from "@/types";
+import type { ApiResponse, Make, Vehicle } from "@/types";
 
 export class VehicleService {
   static async getMakes(): Promise<ApiResponse<Make>> {

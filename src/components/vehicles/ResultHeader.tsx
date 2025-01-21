@@ -1,3 +1,6 @@
+import { Calendar, Car, ChevronLeft } from "lucide-react";
+import Link from "next/link";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -6,9 +9,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-import { Calendar, Car, ChevronLeft } from "lucide-react";
-import Link from "next/link";
-
 interface ResultHeaderProps {
   year: string;
   makeName?: string;
@@ -16,15 +16,15 @@ interface ResultHeaderProps {
 
 export function ResultHeader({ year, makeName }: ResultHeaderProps) {
   return (
-    <Card className="border-none shadow-none bg-transparent">
+    <Card className="border-none bg-transparent shadow-none">
       <CardHeader className="flex flex-row items-center justify-between p-0">
         <div className="space-y-2">
-          <CardTitle className="text-3xl font-bold flex items-center gap-2">
-            <Car className="h-7 w-7" />
+          <CardTitle className="flex items-center gap-2 text-3xl font-bold">
+            <Car className="size-7" />
             Available Models
           </CardTitle>
-          <CardDescription className="text-base flex items-center gap-2">
-            <Calendar className="h-4 w-4" />
+          <CardDescription className="flex items-center gap-2 text-base">
+            <Calendar className="size-4" />
             <span>Model Year: {year}</span>
             {makeName && (
               <>
@@ -37,7 +37,7 @@ export function ResultHeader({ year, makeName }: ResultHeaderProps) {
 
         <Link href="/">
           <Button variant="outline" className="flex items-center gap-2">
-            <ChevronLeft className="h-4 w-4" />
+            <ChevronLeft className="size-4" />
             Back to Search
           </Button>
         </Link>

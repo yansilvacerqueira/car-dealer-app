@@ -14,11 +14,11 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto p-6">
+      <div className="mx-auto max-w-4xl p-6">
         {loading ? (
           <FilterFormSkeleton />
         ) : (
-          <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+          <div className="flex min-h-screen items-center justify-center bg-gray-50">
             <FilterForm makes={makes} loading={loading} />
           </div>
         )}

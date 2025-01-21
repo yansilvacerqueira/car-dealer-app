@@ -1,4 +1,8 @@
 "use client";
+import { Calendar, Car, CarFront } from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -16,10 +20,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Make } from "@/types";
-import { Calendar, Car, CarFront } from "lucide-react";
-import Link from "next/link";
-import { useState } from "react";
+import type { Make } from "@/types";
 
 interface FilterFormProps {
   makes: Make[];
@@ -42,7 +43,7 @@ export function FilterForm({ makes, loading }: FilterFormProps) {
     <Card className="w-full">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Car className="h-6 w-6" />
+          <Car className="size-6" />
           Find Your Vehicle
         </CardTitle>
 
@@ -54,7 +55,7 @@ export function FilterForm({ makes, loading }: FilterFormProps) {
       <CardContent className="space-y-6">
         <div className="space-y-2">
           <Label htmlFor="make" className="flex items-center gap-2">
-            <CarFront className="h-6 w-6" />
+            <CarFront className="size-6" />
             Vehicle Make
           </Label>
 
@@ -79,7 +80,7 @@ export function FilterForm({ makes, loading }: FilterFormProps) {
 
         <div className="space-y-2">
           <Label htmlFor="year" className="flex items-center gap-2">
-            <Calendar className="h-4 w-4" />
+            <Calendar className="size-4" />
             Model Year
           </Label>
 

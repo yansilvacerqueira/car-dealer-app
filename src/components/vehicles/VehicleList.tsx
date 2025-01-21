@@ -1,4 +1,6 @@
 "use client";
+import { useState } from "react";
+
 import {
   Pagination,
   PaginationContent,
@@ -7,8 +9,8 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import { Vehicle } from "@/types";
-import { useState } from "react";
+import type { Vehicle } from "@/types";
+
 import { VehicleCard } from "./VehicleCard";
 
 interface VehicleListProps {
@@ -33,7 +35,7 @@ export function VehicleList({ vehicles, itemsPerPage = 9 }: VehicleListProps) {
 
   return (
     <div className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {currentVehicles.map((vehicle, index) => (
           <VehicleCard key={index} vehicle={vehicle} />
         ))}

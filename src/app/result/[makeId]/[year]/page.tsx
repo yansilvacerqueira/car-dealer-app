@@ -1,8 +1,9 @@
+import { Suspense } from "react";
+
 import { LoadingSkeleton } from "@/components/ui/loadingSkeleton";
 import { ResultHeader } from "@/components/vehicles/ResultHeader";
 import { VehicleList } from "@/components/vehicles/VehicleList";
 import { VehicleService } from "@/services/vehicleService";
-import { Suspense } from "react";
 
 interface PageProps {
   params: Promise<{ makeId: string; year: string }>;
@@ -16,7 +17,7 @@ export default async function ResultPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto p-6">
+      <div className="mx-auto max-w-7xl p-6">
         <div className="space-y-6">
           <ResultHeader year={year} />
 
